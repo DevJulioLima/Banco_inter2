@@ -2,18 +2,14 @@ package entidades;
 
 public class ContaBancaria {
     private String numeroConta;
-    private double saldo;
+    private float saldo;
     private String agencia;
-    private String extrato;
+    private float extrato;
 
-    public ContaBancaria() {
-    }
-
-    public ContaBancaria(String numeroConta, double saldo, String agencia, String extrato) {
+    public ContaBancaria(String numeroConta, float saldo, String agencia) {
         this.numeroConta = numeroConta;
         this.saldo = saldo;
         this.agencia = agencia;
-        this.extrato = extrato;
     }
 
     public String getNumeroConta() {
@@ -24,11 +20,11 @@ public class ContaBancaria {
         this.numeroConta = numeroConta;
     }
 
-    public double getSaldo() {
+    public float getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 
@@ -39,11 +35,11 @@ public class ContaBancaria {
     public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
-    public String getExtrato(){
+    public float getExtrato(){
         return extrato;
     }
 
-    public void setExtrato(String extrato){
+    public void setExtrato(float extrato){
         this.extrato = extrato;
     }
 }

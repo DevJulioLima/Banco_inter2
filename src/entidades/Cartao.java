@@ -3,17 +3,17 @@ package entidades;
 import java.util.Date;
 
 public class Cartao {
-    private String credito;
+    private float credito;
     private String numeroCartao;
-    private String bandeira;
+    private boolean bandeira;
     private String cvv;
     private Date validade;
-    private String fatura;
+    private float fatura;
 
     public Cartao() {
     }
 
-    public Cartao(String credito, String numeroCartao, String bandeira, String cvv, Date validade, String fatura) {
+    public Cartao(float credito, String numeroCartao, boolean bandeira, String cvv, Date validade,float fatura) {
         this.credito = credito;
         this.numeroCartao = numeroCartao;
         this.bandeira = bandeira;
@@ -22,11 +22,11 @@ public class Cartao {
         this.fatura = fatura;
     }
 
-    public String getCredito() {
+    public float getCredito() {
         return credito;
     }
 
-    public void setCredito(String credito) {
+    public void setCredito(float credito) {
         this.credito = credito;
     }
 
@@ -38,11 +38,11 @@ public class Cartao {
         this.numeroCartao = numeroCartao;
     }
 
-    public String getBandeira() {
+    public boolean getBandeira() {
         return bandeira;
     }
 
-    public void setBandeira(String bandeira) {
+    public void setBandeira(boolean bandeira) {
         this.bandeira = bandeira;
     }
 
@@ -62,11 +62,11 @@ public class Cartao {
         this.validade = validade;
     }
 
-    public String getFatura(){
+    public float getFatura(){
         return fatura;
     }
 
-    public void setFatura(String fatura){
+    public void setFatura (float fatura){
         this.fatura = fatura;
     }
 }

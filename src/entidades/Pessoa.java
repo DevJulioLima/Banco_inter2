@@ -3,6 +3,7 @@ package entidades;
 import java.util.Date;
 
 public abstract class Pessoa {
+    private boolean tipoCliente;
     private String nome;
     private String email;
     private Date dataDeNasimento;
@@ -10,16 +11,23 @@ public abstract class Pessoa {
     private String rg;
     private String cpf;
 
-    public Pessoa() {
-    }
 
-    public Pessoa(String nome, String email, Date dataDeNasimento, String telefone, String rg, String cpf) {
+    public Pessoa(boolean tipoCliente,String nome, String email, Date dataDeNasimento, String telefone, String rg, String cpf) {
+        this.tipoCliente = tipoCliente;
         this.nome = nome;
         this.email = email;
         this.dataDeNasimento = dataDeNasimento;
         this.telefone = telefone;
         this.rg = rg;
         this.cpf = cpf;
+    }
+
+    public boolean isTipoCliente() {
+        return tipoCliente;
+    }
+
+    public void setTipoCliente(boolean tipoCliente) {
+        this.tipoCliente = tipoCliente;
     }
 
     public String getNome() {

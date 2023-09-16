@@ -1,20 +1,17 @@
 package entidades;
 
 public class ClientePf {
-    private double rendaMensal;
+    private float rendaMensal;
 
-    public ClientePf() {
-    }
-
-    public ClientePf(double rendaMensal) {
+    public ClientePf (float rendaMensal) {
         this.rendaMensal = rendaMensal;
     }
 
-    public double getRendaMensal() {
+    public float getRendaMensal() {
         return rendaMensal;
     }
 
-    public void setRendaMensal(double rendaMensal) {
+    public void setRendaMensal(float rendaMensal) {
         this.rendaMensal = rendaMensal;
     }
 }

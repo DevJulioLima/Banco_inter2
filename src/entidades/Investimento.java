@@ -3,16 +3,7 @@ package entidades;
 public class Investimento {
     private String acoes;
     private String titulos;
-    private double selic;
-
-    public Investimento() {
-    }
-
-    public Investimento(String acoes, String titulos, double selic) {
-        this.acoes = acoes;
-        this.titulos = titulos;
-        this.selic = selic;
-    }
+    private float selic;
 
     public String getAcoes() {
         return acoes;
@@ -30,11 +21,11 @@ public class Investimento {
         this.titulos = titulos;
     }
 
-    public double getSelic() {
+    public float getSelic() {
         return selic;
     }
 
-    public void setSelic(double selic) {
+    public void setSelic(float selic) {
         this.selic = selic;
     }
 }

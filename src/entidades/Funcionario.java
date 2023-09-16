@@ -2,11 +2,9 @@ package entidades;
 
 public class Funcionario {
     private String cargo;
-    private double salario;
+    private float salario;
 
-    public Funcionario() {
-    }
-    public Funcionario(String cargo, double salario) {
+    public Funcionario(String cargo, float salario) {
         this.cargo = cargo;
         this.salario = salario;
     }
@@ -19,11 +17,11 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
-    public double getSalario() {
+    public float getSalario() {
         return salario;
     }
 
-    public void setSalario(double salario) {
+    public void setSalario(float salario) {
         this.salario = salario;
     }
 }
