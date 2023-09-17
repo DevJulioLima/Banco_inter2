@@ -1,25 +1,30 @@
 package entidades;
 
-import java.util.Date;
+
+import java.sql.Date;
 
 public abstract class Pessoa {
     private boolean tipoCliente;
     private String nome;
     private String email;
-    private Date dataDeNasimento;
+    private Date dataDeNascimento;
     private String telefone;
     private String rg;
     private String cpf;
+    private int id;
 
+    public Pessoa() {
+    }
 
-    public Pessoa(boolean tipoCliente,String nome, String email, Date dataDeNasimento, String telefone, String rg, String cpf) {
+    public Pessoa(boolean tipoCliente, String nome, String email, Date dataDeNasimento, String telefone, String rg, String cpf, int id) {
         this.tipoCliente = tipoCliente;
         this.nome = nome;
         this.email = email;
-        this.dataDeNasimento = dataDeNasimento;
+        this.dataDeNascimento = dataDeNascimento;
         this.telefone = telefone;
         this.rg = rg;
         this.cpf = cpf;
+        this.id = id;
     }
 
     public boolean isTipoCliente() {
@@ -46,12 +51,12 @@ public abstract class Pessoa {
         this.email = email;
     }
 
-    public Date getDataDeNasimento() {
-        return dataDeNasimento;
+    public Date getDataDeNascimento() {
+        return dataDeNascimento;
     }
 
-    public void setDataDeNasimento(Date dataDeNasimento) {
-        this.dataDeNasimento = dataDeNasimento;
+    public void setDataDeNascimento(Date dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
     }
 
     public String getTelefone() {
@@ -76,5 +81,13 @@ public abstract class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
