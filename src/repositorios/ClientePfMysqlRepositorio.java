@@ -8,10 +8,10 @@ import java.sql.*;
 import java.util.ArrayList;
 
 
-public class ClienteMysqlPfRepositorio implements iClientePfRepositorioJdbc {
+public class ClientePfMysqlRepositorio implements iClientePfRepositorioJdbc {
 
     private Connection conn;
-    public ClienteMysqlPfRepositorio(){
+    public ClientePfMysqlRepositorio(){
         try{
             //this.conn = ConnectionSingleton.getInstance().conexao;
         } catch (Exception e) {
@@ -21,10 +21,10 @@ public class ClienteMysqlPfRepositorio implements iClientePfRepositorioJdbc {
     public long cadastrar(ClientePf clientePf) throws Exception {
 
         try{
-            String saql_clientePf = "INSERT INTO sistema"
+            String sql_clientePf = "INSERT INTO sistema"
                     + "(tipoCliente, nome, email, dataDeNascimento, telefone, rg, cpf, rendaMensal)"
                     + "VALUES(?,?,?,?,?,?,?,?);";
-            PreparedStatement ps = conn.prepareStatement(saql_clientePf, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = conn.prepareStatement(sql_clientePf, Statement.RETURN_GENERATED_KEYS);
             ps.setBoolean(1,clientePf.isTipoCliente());
             ps.setString(2, clientePf.getNome());
             ps.setString(3, clientePf.getEmail());
@@ -57,10 +57,10 @@ public class ClienteMysqlPfRepositorio implements iClientePfRepositorioJdbc {
     public void alterar(ClientePf clientePf) throws SQLException{
         try{
 
-            String sqlCliente = "UPDATE cliente SET nome=? ,tipoCliente=?"
+            String sqlClientePf = "UPDATE clientePf SET nome=? ,tipoCliente=?"
                     + ", email=?, telefone=?, rendaMensal=?;";
 
-            PreparedStatement ps = conn.prepareStatement(sqlCliente);
+            PreparedStatement ps = conn.prepareStatement(sqlClientePf);
             ps.setString(1, clientePf.getNome());
             ps.setBoolean(2, clientePf.isTipoCliente());
             ps.setString(3, clientePf.getEmail());
@@ -96,7 +96,7 @@ public class ClienteMysqlPfRepositorio implements iClientePfRepositorioJdbc {
                 clientesPf.add(clientePf);
                     } catch (SQLException e1){
                 System.out.println(e1);
-                };
+                }
 
             }
         return clientesPf;
