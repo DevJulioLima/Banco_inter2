@@ -17,7 +17,7 @@ public class conexaomysql {
             System.out.println("Sucesso ao conectar com o banco de dados: " + url);
 
             String query =  "use banco_inter insert into tbpessoa (CPF,NOME,RG,DATA_DE_NASCIMENTO,TELEFONE, EMAIL,CLIENTE)" +
-                    " VALUES('13777799906', 'ADRYAN TESTE', '10666999', 2002-02-14, '81984479047', 'ADRYANRIAN@GMAIL.COM',1)";
+                    " VALUES('13777799906','ADRYAN TESTE', '10666999', 2002-02-14, '81984479047', 'ADRYANRIAN@GMAIL.COM',1)";
 
             Statement statement = connection.createStatement();
             statement.execute(query);
